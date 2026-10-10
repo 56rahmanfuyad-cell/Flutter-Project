@@ -65,14 +65,37 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Text(
-        'YOKOSO',
-        style: GoogleFonts.lobster(
-          textStyle: const TextStyle(
-            fontSize: 24,
-            color: const Color.fromARGB(255, 26, 165, 142),
+      body: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 151, 206, 164),
+                foregroundColor: const Color.fromARGB(255, 128, 18, 109),
+                side: BorderSide(
+                  color: const Color.fromARGB(255, 128, 18, 109),
+                ),
+                elevation: 5,
+                shadowColor: const Color.fromARGB(255, 65, 255, 182),
+              ),
+              child: Text("Click me"),
+            ),
           ),
-        ),
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 154, 98, 141),
+              foregroundColor: const Color.fromARGB(255, 212, 185, 49),
+              elevation: 15,
+              shadowColor: const Color.fromARGB(255, 65, 255, 182),
+            ),
+            child: const Text("Green"),
+          ),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.login)),
+          ElevatedButton(onPressed: () {}, child: const Text("Blue")),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
